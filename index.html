@@ -384,13 +384,13 @@
             <div class="bento-caption">فريقنا المدرسي، حائز كأس بطولة مدارس الشمال المحرر</div>
           </div>
 
-          <div class="bento-cell tile c1">
-            <div class="icon">🩺</div>
-            <div class="job">طبيب / طبيبة</div>
-            <div class="tag">الحلم الأكثر تكرارًا</div>
+          <div class="bento-cell photo">
+            <img src="assets/images/dream-doctor.jpg" alt="طالب يرتدي زي طبيب - حلمه أن يصبح طبيبًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="photo-fallback" style="display:none;"><code>assets/images/dream-doctor.jpg</code></div>
+            <div class="bento-caption">🩺 طبيب / طبيبة</div>
           </div>
 
-          <div class="bento-cell photo" style="grid-column:span 1; grid-row:span 1;">
+          <div class="bento-cell photo">
             <img src="assets/images/story-2.jpg" alt="لحظة من الحياة المدرسية" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="photo-fallback" style="display:none;"><code>assets/images/story-2.jpg</code></div>
           </div>
@@ -401,25 +401,27 @@
             <div class="tag">يريدون أن يمنحوا غيرهم ما نالوه من مدرستهم</div>
           </div>
 
-          <div class="bento-cell photo" style="grid-column:span 1; grid-row:span 1;">
+          <div class="bento-cell photo" style="grid-row:span 2;">
+            <img src="assets/images/dream-engineer.jpg" alt="طالب يرتدي زي مهندس - حلمه أن يصبح مهندسًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="photo-fallback" style="display:none;"><code>assets/images/dream-engineer.jpg</code></div>
+            <div class="bento-caption">🏗️ مهندس / مهندسة</div>
+          </div>
+
+          <div class="bento-cell photo">
             <img src="assets/images/story-3.jpg" alt="لحظة من الحياة المدرسية" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="photo-fallback" style="display:none;"><code>assets/images/story-3.jpg</code></div>
           </div>
 
-          <div class="bento-cell tile c3" style="grid-column:span 2;">
-            <div class="icon">🏗️</div>
-            <div class="job">مهندس / مهندسة</div>
-            <div class="tag">ليبنوا من جديد ما هدمته الحرب</div>
+          <div class="bento-cell photo" style="grid-column:span 2;">
+            <img src="assets/images/dream-lawyer.jpg" alt="طالب يرتدي زي محامٍ - حلمه أن يصبح محاميًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="photo-fallback" style="display:none;"><code>assets/images/dream-lawyer.jpg</code></div>
+            <div class="bento-caption">⚖️ محامٍ / محامية</div>
           </div>
 
-          <div class="bento-cell tile c4">
-            <div class="icon">💊</div>
-            <div class="job">صيدلاني / صيدلانية</div>
-          </div>
-
-          <div class="bento-cell tile c5">
-            <div class="icon">⚖️</div>
-            <div class="job">محامٍ / محامية</div>
+          <div class="bento-cell photo">
+            <img src="assets/images/dream-pharmacist.jpg" alt="طالب يرتدي زي صيدلاني - حلمه أن يصبح صيدلانيًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="photo-fallback" style="display:none;"><code>assets/images/dream-pharmacist.jpg</code></div>
+            <div class="bento-caption">💊 صيدلاني / صيدلانية</div>
           </div>
         </div>
       </div>
@@ -506,13 +508,6 @@
     <h2>300,000$ تفصل بين طفل ومستقبله</h2>
     <p>ساهم اليوم في تجهيز مساحة آمنة ومستدامة لـ 333 طفلًا يتيمًا في إدلب. كل مساهمة، مهما كان حجمها، جزء من هذه القصة.</p>
     <a class="btn" href="#" id="donate-btn-footer">ساهم الآن</a>
-
-    <div class="foot-links">
-      <a href="#" id="drive-album-link" target="_blank" rel="noopener">ألبوم الصور والتوثيقات الكامل</a>
-      <a href="#">مدرسة ملهم للأيتام - وثيقة المشروع</a>
-      <a href="#">فريق ملهم</a>
-    </div>
-    <p class="foot-meta">آخر تحديث للبيانات: عدّل هذا التاريخ يدويًا عند كل تحديث للأرقام.</p>
   </div>
 </footer>
 
@@ -524,8 +519,7 @@
 const CONFIG = {
   fundingGoal: 300000,
   fundingRaised: 0,                 // حدّث هذا الرقم كل ما وصل تبرع جديد
-  donateUrl: "#",                   // ضع رابط صفحة التبرع الفعلي هنا
-  driveAlbumUrl: "https://drive.google.com/drive/folders/1zZNe3r9KsTHiu0peEDpcUfXbA5PMaaI-?usp=sharing",
+  donateUrl: "https://molhamteam.com/campaigns/915",
   budgetItems: [                    // نسب تقديرية أولية - استبدلها بعروض أسعار حقيقية
     { label: "ترميم المبنى",              amount: 120000, color: "#0F5C4F" },
     { label: "التأثيث والتجهيز",           amount: 75000,  color: "#C1502E" },
@@ -542,7 +536,6 @@ document.getElementById('goal-label').textContent = 'الهدف ' + CONFIG.fundi
 ['donate-btn-header','donate-btn-hero','donate-btn-footer'].forEach(id=>{
   document.getElementById(id).href = CONFIG.donateUrl;
 });
-document.getElementById('drive-album-link').href = CONFIG.driveAlbumUrl;
 
 /* ---------- بطاقة الميزانية ---------- */
 const total = CONFIG.budgetItems.reduce((s,i)=>s+i.amount,0);
