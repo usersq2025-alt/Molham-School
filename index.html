@@ -8,15 +8,20 @@
 
 <!-- Link Preview / Open Graph - تظهر عند مشاركة الرابط في واتساب وفيسبوك وتويتر -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Molham-School">
 <meta property="og:title" content="حملة تجهيز مدرسة ملهم للأيتام | إدلب - سوريا">
 <meta property="og:description" content="333 طفلًا يتيمًا يحتاجون مبنى تعليميًا آمنًا. ساهم في حملة تجهيز مدرسة ملهم للأيتام بقيمة 300,000 دولار.">
-<meta property="og:image" content="https://usersq2025-alt.github.io/Molham-School/assets/images/preview.jpg">
-<meta property="og:url" content="https://usersq2025-alt.github.io/Molham-School/">
+<meta property="og:image" content="https://molham-school.netlify.app/assets/images/preview.jpg">
+<meta property="og:image:secure_url" content="https://molham-school.netlify.app/assets/images/preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1730">
+<meta property="og:image:height" content="909">
+<meta property="og:url" content="https://molham-school.netlify.app/">
 <meta property="og:locale" content="ar_AR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="حملة تجهيز مدرسة ملهم للأيتام | إدلب - سوريا">
 <meta name="twitter:description" content="333 طفلًا يتيمًا يحتاجون مبنى تعليميًا آمنًا. ساهم في حملة تجهيز مدرسة ملهم للأيتام بقيمة 300,000 دولار.">
-<meta name="twitter:image" content="https://usersq2025-alt.github.io/Molham-School/assets/images/preview.jpg">
+<meta name="twitter:image" content="https://molham-school.netlify.app/assets/images/preview.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -72,7 +77,7 @@
     font-family:'Amiri',serif; font-weight:700; font-size:18px;
   }
   .brand-text{font-weight:700; font-size:15px; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-  .brand-text span{display:block; font-weight:400; font-size:11px; color:var(--ink-soft);}
+  .brand-text .bt-sub{display:block; font-weight:400; font-size:11px; color:var(--ink-soft);}
   .progress-box{flex:1; max-width:340px; min-width:160px;}
   .progress-labels{display:flex; justify-content:space-between; font-size:11px; color:var(--ink-soft); margin-bottom:5px;}
   .progress-track{height:8px; background:var(--paper-2); border-radius:6px; overflow:hidden; border:1px solid var(--line);}
@@ -134,7 +139,7 @@
   }
   .kpi-card{
     background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
-    padding:20px 18px; text-align:right;
+    padding:20px 18px; text-align:start;
   }
   .kpi-card.warn{background:var(--accent-light); border-color:#EAC4B2;}
   .kpi-card.gold{background:var(--gold-light); border-color:#EAD7A8;}
@@ -232,7 +237,7 @@
   .gap-seg.female{background:var(--soft-rose-ink);}
   .gap-note{display:flex; gap:20px; margin-top:14px; font-size:12.5px; color:var(--ink-soft);}
   .gap-source{font-size:11.5px; color:var(--ink-soft); margin-top:12px;}
-  .dot{width:9px; height:9px; border-radius:50%; display:inline-block; margin-left:6px;}
+  .dot{width:9px; height:9px; border-radius:50%; display:inline-block; margin-inline-end:6px;}
 
   .building-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
   @media (max-width:700px){.building-grid{grid-template-columns:1fr;}}
@@ -286,6 +291,49 @@
   }
   .foot-links a{text-decoration:underline; text-underline-offset:3px;}
   .foot-meta{margin-top:18px; font-size:11.5px; color:#7C7A70;}
+
+  /* ===== أزرار اللغة والوضع الليلي ===== */
+  .header-tools{display:flex; gap:8px; flex:none;}
+  .icon-btn{
+    width:38px; height:38px; border-radius:999px;
+    border:1.5px solid var(--line); background:var(--white); color:var(--ink);
+    font-family:'Tajawal',sans-serif; font-weight:700; font-size:12.5px;
+    cursor:pointer; display:inline-flex; align-items:center; justify-content:center;
+    transition:border-color .15s ease, transform .15s ease; flex:none; padding:0;
+  }
+  .icon-btn:hover{border-color:var(--primary); transform:translateY(-1px);}
+
+  /* ===== تكيّف الاتجاه LTR (الإنجليزية) ===== */
+  [dir="ltr"] .spine{right:auto; left:26px;}
+  [dir="ltr"] .budget-amount{text-align:right;}
+  .dream-feature .dream-caption{text-align:start; padding-inline:16px;}
+  [dir="ltr"] body, [dir="ltr"] .icon-btn{font-family:'Tajawal',sans-serif;}
+
+  /* ===== الوضع الليلي ===== */
+  :root[data-theme="dark"]{
+    --ink:#E9E7DF;
+    --ink-soft:#AEACA0;
+    --paper:#141816;
+    --paper-2:#1E2420;
+    --primary:#4CB399;
+    --primary-light:#1C312B;
+    --accent:#E2734E;
+    --accent-light:#33231C;
+    --gold:#D8A65C;
+    --gold-light:#332A19;
+    --line:#333B36;
+    --white:#1B211D;
+  }
+  [data-theme="dark"] header.site{background:rgba(20,24,22,0.94);}
+  [data-theme="dark"] .btn{color:#fff;}
+  [data-theme="dark"] .brand-fallback{color:#fff;}
+  [data-theme="dark"] .gap-seg{color:#fff;}
+  [data-theme="dark"] .kpi-card.warn{border-color:#4A332A;}
+  [data-theme="dark"] .kpi-card.gold{border-color:#4A3D22;}
+  [data-theme="dark"] .kpi-card.gold .kpi-num{color:var(--gold);}
+  [data-theme="dark"] .ba-card.after{border-color:#2C4A40;}
+  [data-theme="dark"] footer.cta-final{background:#0C100E;}
+  body, header.site{transition:background .25s ease, color .25s ease;}
 </style>
 </head>
 <body>
@@ -295,13 +343,17 @@
     <div class="brand">
       <img src="assets/images/logo.png" alt="شعار فريق ملهم" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="brand-fallback" style="display:none;">م</div>
-      <div class="brand-text">مدرسة ملهم للأيتام<span>حملة التجهيز - إدلب</span></div>
+      <div class="brand-text"><span data-i18n="brand.title">مدرسة ملهم للأيتام</span><span class="bt-sub" data-i18n="brand.sub">حملة التجهيز - إدلب</span></div>
     </div>
     <div class="progress-box">
       <div class="progress-labels"><span id="raised-label">0$</span><span id="goal-label">الهدف 300,000$</span></div>
       <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
     </div>
-    <a class="btn" href="#" id="donate-btn-header">ساهم الآن</a>
+    <div class="header-tools">
+      <button class="icon-btn" id="lang-toggle" aria-label="Switch language / تبديل اللغة">EN</button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode / الوضع الليلي">🌙</button>
+    </div>
+    <a class="btn" href="#" id="donate-btn-header" data-i18n="btn.donate">ساهم الآن</a>
   </div>
 </header>
 
@@ -322,33 +374,33 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <span class="eyebrow">مدرسة مخصصة حصرًا لرعاية الأيتام - تأسست 2021</span>
-          <h1>333 طفلًا فقدوا آباءهم، لم يفقدوا أحلامهم</h1>
-          <p class="lead">كل طالب في مدرسة ملهم للأيتام فقد معيله بسبب الحرب — لا توجد استثناءات، فهذا شرط القبول الأساسي في المدرسة. اليوم 38% منهم بلا كفالة تعليمية فردية، والمبنى الحالي لم يعد كافيًا لاستيعابهم بأمان.</p>
+          <span class="eyebrow" data-i18n="hero.eyebrow">مدرسة مخصصة حصرًا لرعاية الأيتام - تأسست 2021</span>
+          <h1 data-i18n="hero.title">333 طفلًا فقدوا آباءهم، لم يفقدوا أحلامهم</h1>
+          <p class="lead" data-i18n="hero.lead">كل طالب في مدرسة ملهم للأيتام فقد معيله بسبب الحرب — لا توجد استثناءات، فهذا شرط القبول الأساسي في المدرسة. اليوم 38% منهم بلا كفالة تعليمية فردية، والمبنى الحالي لم يعد كافيًا لاستيعابهم بأمان.</p>
           <div class="hero-ctas">
-            <a class="btn" href="#" id="donate-btn-hero">ساهم في الحملة</a>
-            <a class="btn ghost" href="#s1">اقرأ القصة</a>
+            <a class="btn" href="#" id="donate-btn-hero" data-i18n="hero.cta1">ساهم في الحملة</a>
+            <a class="btn ghost" href="#s1" data-i18n="hero.cta2">اقرأ القصة</a>
           </div>
         </div>
         <div class="photo-slot hero-photo">
           <img src="assets/images/hero.jpg" alt="طلاب مدرسة ملهم للأيتام" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="photo-fallback" style="display:none;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-4 4-3-3-6 6"/></svg>
-            <span>صورة رئيسية أفقية للمدرسة أو الطلاب</span>
+            <span data-i18n="fallback.hero">صورة رئيسية أفقية للمدرسة أو الطلاب</span>
             <code>assets/images/hero.jpg</code>
           </div>
         </div>
       </div>
 
       <div class="kpi-row">
-        <div class="kpi-card"><div class="kpi-num" data-count="333">0</div><div class="kpi-label">طالبًا وطالبة (العدد الحالي النشط)</div></div>
-        <div class="kpi-card gold"><div class="kpi-num" data-count="30" data-suffix="$">0</div><div class="kpi-label">متوسط الكلفة الشهرية لكل طالب</div></div>
-        <div class="kpi-card warn"><div class="kpi-num" data-count="38" data-suffix="%">0</div><div class="kpi-label">بلا كفالة تعليمية</div></div>
-        <div class="kpi-card"><div class="kpi-num" data-count="145">0</div><div class="kpi-label">فردًا من أسر الكادر يعتمدون على المدرسة</div></div>
-        <div class="kpi-card"><div class="kpi-num" data-count="9">0</div><div class="kpi-label">مستويات دراسية مخدومة (1-9)</div></div>
-        <div class="kpi-card"><div class="kpi-num" data-count="17" data-suffix="%">0</div><div class="kpi-label">من الطلاب لديهم احتياجات صحية إضافية موثّقة</div></div>
+        <div class="kpi-card"><div class="kpi-num" data-count="333">0</div><div class="kpi-label" data-i18n="kpi.1">طالبًا وطالبة (العدد الحالي النشط)</div></div>
+        <div class="kpi-card gold"><div class="kpi-num" data-count="30" data-suffix="$">0</div><div class="kpi-label" data-i18n="kpi.2">متوسط الكلفة الشهرية لكل طالب</div></div>
+        <div class="kpi-card warn"><div class="kpi-num" data-count="38" data-suffix="%">0</div><div class="kpi-label" data-i18n="kpi.3">بلا كفالة تعليمية</div></div>
+        <div class="kpi-card"><div class="kpi-num" data-count="145">0</div><div class="kpi-label" data-i18n="kpi.4">فردًا من أسر الكادر يعتمدون على المدرسة</div></div>
+        <div class="kpi-card"><div class="kpi-num" data-count="9">0</div><div class="kpi-label" data-i18n="kpi.5">مستويات دراسية مخدومة (1-9)</div></div>
+        <div class="kpi-card"><div class="kpi-num" data-count="17" data-suffix="%">0</div><div class="kpi-label" data-i18n="kpi.6">من الطلاب لديهم احتياجات صحية إضافية موثّقة</div></div>
       </div>
-      <p class="kpi-note">المصدر: ملف بيانات الطلاب النشطين الحالي لمدرسة ملهم للأيتام (333 طالبًا) وتقرير الأثر الإنساني والتعليمي.</p>
+      <p class="kpi-note" data-i18n="kpi.note">المصدر: ملف بيانات الطلاب النشطين الحالي لمدرسة ملهم للأيتام (333 طالبًا) وتقرير الأثر الإنساني والتعليمي.</p>
     </div>
 
   </section>
@@ -358,23 +410,23 @@
   <!-- SECTION 1 -->
   <section id="s1">
     <div class="wrap">
-      <span class="eyebrow">القسم الأول</span>
-      <h2 class="section-title">لماذا هذه المدرسة مهمة؟</h2>
-      <p class="section-sub">مدرسة ملهم للأيتام ليست مركزًا تعليميًا عاديًا، بل بيئة حماية كاملة للأطفال الذين فقدوا معيلهم في الحرب: دعم نفسي، أنشطة، ومساحة آمنة يوميًا.</p>
+      <span class="eyebrow" data-i18n="s1.eyebrow">القسم الأول</span>
+      <h2 class="section-title" data-i18n="s1.title">لماذا هذه المدرسة مهمة؟</h2>
+      <p class="section-sub" data-i18n="s1.sub">مدرسة ملهم للأيتام ليست مركزًا تعليميًا عاديًا، بل بيئة حماية كاملة للأطفال الذين فقدوا معيلهم في الحرب: دعم نفسي، أنشطة، ومساحة آمنة يوميًا.</p>
 
       <div class="about-box">
-        <p>تستقبل المدرسة أطفالاً فقدوا أحد الوالدين أو كليهما، ويعيش كثير منهم في ظروف معيشية صعبة، حيث يضطر بعضهم للعمل بعد الدوام المدرسي. تقدّم تعليماً مجانياً متكاملاً، إلى جانب برامج دعم نفسي واجتماعي، وأنشطة تربوية تساعد على استقرار الأطفال واستمرارهم في التعليم. يعتمد المشروع على نظام الكفالات التعليمية لتغطية تكاليف الدراسة وتأمين المستلزمات الأساسية، إضافة إلى دعم المصروف اليومي للطلاب. يركّز العمل على إبقاء الأطفال ضمن العملية التعليمية وتخفيف أثر الظروف المعيشية عليهم. تأسست عام 2021.</p>
+        <p data-i18n="about.text">تستقبل المدرسة أطفالاً فقدوا أحد الوالدين أو كليهما، ويعيش كثير منهم في ظروف معيشية صعبة، حيث يضطر بعضهم للعمل بعد الدوام المدرسي. تقدّم تعليماً مجانياً متكاملاً، إلى جانب برامج دعم نفسي واجتماعي، وأنشطة تربوية تساعد على استقرار الأطفال واستمرارهم في التعليم. يعتمد المشروع على نظام الكفالات التعليمية لتغطية تكاليف الدراسة وتأمين المستلزمات الأساسية، إضافة إلى دعم المصروف اليومي للطلاب. يركّز العمل على إبقاء الأطفال ضمن العملية التعليمية وتخفيف أثر الظروف المعيشية عليهم. تأسست عام 2021.</p>
       </div>
 
       <div class="gap-wrap">
-        <div class="gap-label-row"><span>التوزيع حسب الجنس - 333 طالبًا وطالبة</span><span>174 ذكرًا / 159 أنثى</span></div>
+        <div class="gap-label-row"><span data-i18n="gender.label">التوزيع حسب الجنس - 333 طالبًا وطالبة</span><span data-i18n="gender.counts">174 ذكرًا / 159 أنثى</span></div>
         <div class="gap-bar">
-          <div class="gap-seg male" style="width:52%">ذكور 52%</div>
-          <div class="gap-seg female" style="width:48%">إناث 48%</div>
+          <div class="gap-seg male" style="width:52%" data-i18n="gender.male.bar">ذكور 52%</div>
+          <div class="gap-seg female" style="width:48%" data-i18n="gender.female.bar">إناث 48%</div>
         </div>
         <div class="gap-note">
-          <span><span class="dot" style="background:var(--soft-blue-ink)"></span>ذكور</span>
-          <span><span class="dot" style="background:var(--soft-rose-ink)"></span>إناث</span>
+          <span><span class="dot" style="background:var(--soft-blue-ink)"></span><span data-i18n="gender.male">ذكور</span></span>
+          <span><span class="dot" style="background:var(--soft-rose-ink)"></span><span data-i18n="gender.female">إناث</span></span>
         </div>
       </div>
 
@@ -383,67 +435,67 @@
           <img src="assets/images/story-1.jpg" alt="طالب من مدرسة ملهم للأيتام" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="photo-fallback" style="display:none;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-            <span>صورة بورتريه مربعة لطالب/ة (بموافقة)</span>
+            <span data-i18n="fallback.portrait">صورة بورتريه مربعة لطالب/ة (بموافقة)</span>
             <code>assets/images/story-1.jpg</code>
           </div>
         </div>
         <div class="quote-card">
-          <p class="voice">"يحمل حلمًا كبيرًا أن يصبح طبيبًا ليعالج المرضى وينقذ الأرواح، ليحقق طموح والدته ويصنع فرقًا في حياة الناس."</p>
-          <p class="who">من ملف طالب في مدرسة ملهم للأيتام - إدلب</p>
+          <p class="voice" data-i18n="quote.text">"يحمل حلمًا كبيرًا أن يصبح طبيبًا ليعالج المرضى وينقذ الأرواح، ليحقق طموح والدته ويصنع فرقًا في حياة الناس."</p>
+          <p class="who" data-i18n="quote.who">من ملف طالب في مدرسة ملهم للأيتام - إدلب</p>
         </div>
       </div>
 
       <div class="dreams-row">
-        <p class="dreams-title">أحلام أطفالنا</p>
-        <p class="dreams-sub">الأكثر تكرارًا في ملفاتهم الشخصية - 333 قصة، حلم واحد مشترك: مستقبل أفضل</p>
+        <p class="dreams-title" data-i18n="dreams.title">أحلام أطفالنا</p>
+        <p class="dreams-sub" data-i18n="dreams.sub">الأكثر تكرارًا في ملفاتهم الشخصية - 333 قصة، حلم واحد مشترك: مستقبل أفضل</p>
 
         <div class="dream-feature">
           <img src="assets/images/activity-1.jpg" alt="فريق كرة القدم المدرسي - حائز على كأس بطولة مدارس الشمال" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="photo-fallback" style="display:none;"><code>assets/images/activity-1.jpg</code></div>
-          <div class="dream-caption" style="text-align:right; padding-inline:16px;">فريقنا المدرسي، حائز كأس بطولة مدارس الشمال المحرر</div>
+          <div class="dream-caption" data-i18n="dreams.feature">فريقنا المدرسي، حائز كأس بطولة مدارس الشمال المحرر</div>
         </div>
 
         <div class="dream-grid">
           <div class="dream-card">
             <img src="assets/images/dream-doctor.jpg" alt="طالب يرتدي زي طبيب - حلمه أن يصبح طبيبًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="photo-fallback" style="display:none;"><code>assets/images/dream-doctor.jpg</code></div>
-            <div class="dream-caption">🩺 طبيب / طبيبة</div>
+            <div class="dream-caption" data-i18n="dream.doctor">🩺 طبيب / طبيبة</div>
           </div>
 
           <div class="dream-card">
             <img src="assets/images/dream-engineer.jpg" alt="طالب يرتدي زي مهندس - حلمه أن يصبح مهندسًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="photo-fallback" style="display:none;"><code>assets/images/dream-engineer.jpg</code></div>
-            <div class="dream-caption">🏗️ مهندس / مهندسة</div>
+            <div class="dream-caption" data-i18n="dream.engineer">🏗️ مهندس / مهندسة</div>
           </div>
 
           <div class="dream-card">
             <img src="assets/images/dream-swimmer.jpg" alt="طالب يحلم أن يصبح سباحًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="photo-fallback" style="display:none;"><code>assets/images/dream-swimmer.jpg</code></div>
-            <div class="dream-caption">🏊 سباح / سباحة</div>
+            <div class="dream-caption" data-i18n="dream.swimmer">🏊 سباح / سباحة</div>
           </div>
 
           <div class="dream-card">
             <img src="assets/images/dream-teacher.jpg" alt="طالب يرتدي زي معلم - حلمه أن يصبح معلمًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="photo-fallback" style="display:none;"><code>assets/images/dream-teacher.jpg</code></div>
-            <div class="dream-caption">📚 معلم / معلمة</div>
+            <div class="dream-caption" data-i18n="dream.teacher">📚 معلم / معلمة</div>
           </div>
 
           <div class="dream-card">
             <img src="assets/images/dream-lawyer.jpg" alt="طالب يرتدي زي محامٍ - حلمه أن يصبح محاميًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="photo-fallback" style="display:none;"><code>assets/images/dream-lawyer.jpg</code></div>
-            <div class="dream-caption">⚖️ محامٍ / محامية</div>
+            <div class="dream-caption" data-i18n="dream.lawyer">⚖️ محامٍ / محامية</div>
           </div>
 
            <div class="dream-card">
             <img src="assets/images/dream-pharmacist.jpg" alt="طالب يرتدي زي صيدلاني - حلمه أن يصبح صيدلانيًا" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="photo-fallback" style="display:none;"><code>assets/images/dream-pharmacist.jpg</code></div>
-            <div class="dream-caption">💊 صيدلاني / صيدلانية</div>
+            <div class="dream-caption" data-i18n="dream.pharmacist">💊 صيدلاني / صيدلانية</div>
           </div>
 
           <div class="dream-card">
             <img src="assets/images/dream-football.jpg" alt="طالب يحلم أن يصبح لاعب كرة قدم" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="photo-fallback" style="display:none;"><code>assets/images/dream-football.jpg</code></div>
-            <div class="dream-caption">⚽ لاعب / لاعبة كرة قدم</div>
+            <div class="dream-caption" data-i18n="dream.football">⚽ لاعب / لاعبة كرة قدم</div>
           </div>
         </div>
       </div>
@@ -455,19 +507,19 @@
   <!-- SECTION 2 -->
   <section id="s2">
     <div class="wrap">
-      <span class="eyebrow">القسم الثاني</span>
-      <h2 class="section-title">لماذا الانتقال ضروري الآن؟</h2>
-      <p class="section-sub">أكثر من 4 من كل 10 طلاب بلا كفالة تعليمية فردية، والمبنى الحالي بلغ حدوده القصوى. التأخير يعني مزيدًا من الأطفال معرضين لخطر ترك التعليم.</p>
+      <span class="eyebrow" data-i18n="s2.eyebrow">القسم الثاني</span>
+      <h2 class="section-title" data-i18n="s2.title">لماذا الانتقال ضروري الآن؟</h2>
+      <p class="section-sub" data-i18n="s2.sub">أكثر من 4 من كل 10 طلاب بلا كفالة تعليمية فردية، والمبنى الحالي بلغ حدوده القصوى. التأخير يعني مزيدًا من الأطفال معرضين لخطر ترك التعليم.</p>
 
       <div class="gap-wrap">
-        <div class="gap-label-row"><span>حالة الكفالة التعليمية الفردية لـ 333 طالبًا</span><span>205 مكفول / 128 بلا كفيل</span></div>
+        <div class="gap-label-row"><span data-i18n="gap.label">حالة الكفالة التعليمية الفردية لـ 333 طالبًا</span><span data-i18n="gap.counts">205 مكفول / 128 بلا كفيل</span></div>
         <div class="gap-bar">
-          <div class="gap-seg covered" style="width:62%">مكفولون 62%</div>
-          <div class="gap-seg uncovered" style="width:38%">بلا كفالة 38%</div>
+          <div class="gap-seg covered" style="width:62%" data-i18n="gap.covered.bar">مكفولون 62%</div>
+          <div class="gap-seg uncovered" style="width:38%" data-i18n="gap.uncovered.bar">بلا كفالة 38%</div>
         </div>
         <div class="gap-note">
-          <span><span class="dot" style="background:var(--primary)"></span>كفالة نشطة</span>
-          <span><span class="dot" style="background:var(--accent)"></span>بلا كفيل حاليًا</span>
+          <span><span class="dot" style="background:var(--primary)"></span><span data-i18n="gap.covered">كفالة نشطة</span></span>
+          <span><span class="dot" style="background:var(--accent)"></span><span data-i18n="gap.uncovered">بلا كفيل حاليًا</span></span>
         </div>
       </div>
     </div>
@@ -478,9 +530,9 @@
   <!-- SECTION 3 -->
   <section id="s3">
     <div class="wrap">
-      <span class="eyebrow">القسم الثالث</span>
-      <h2 class="section-title">كيف سيُصرف مبلغ 300,000$؟</h2>
-      <p class="section-sub">توزيع أولي مقترح للمبلغ على بنود الترميم والتجهيز. </p>
+      <span class="eyebrow" data-i18n="s3.eyebrow">القسم الثالث</span>
+      <h2 class="section-title" data-i18n="s3.title">كيف سيُصرف مبلغ 300,000$؟</h2>
+      <p class="section-sub" data-i18n="s3.sub">توزيع أولي مقترح للمبلغ على بنود الترميم والتجهيز.</p>
 
       <div class="budget-card" id="budget-card"></div>
     </div>
@@ -491,23 +543,23 @@
   <!-- SECTION 4 -->
   <section id="s4">
     <div class="wrap">
-      <span class="eyebrow">القسم الرابع</span>
-      <h2 class="section-title">ما الأثر المتوقع بعد التمويل؟</h2>
-      <p class="section-sub">من مبنى بلغ حدوده، إلى مساحة آمنة ومستدامة تحمي مستقبل مئات الأطفال وعشرات العائلات.</p>
+      <span class="eyebrow" data-i18n="s4.eyebrow">القسم الرابع</span>
+      <h2 class="section-title" data-i18n="s4.title">ما الأثر المتوقع بعد التمويل؟</h2>
+      <p class="section-sub" data-i18n="s4.sub">من مبنى بلغ حدوده، إلى مساحة آمنة ومستدامة تحمي مستقبل مئات الأطفال وعشرات العائلات.</p>
 
       <div class="before-after">
         <div class="ba-card before">
-          <p class="ba-tag">قبل التمويل</p>
-          <p class="voice">مبنى ضيق، بلا مساحة آمنة كافية، وخطر توقف التعليم قائم لـ 128 طالبًا بلا كفالة</p>
+          <p class="ba-tag" data-i18n="ba.before.tag">قبل التمويل</p>
+          <p class="voice" data-i18n="ba.before.text">مبنى ضيق، بلا مساحة آمنة كافية، وخطر توقف التعليم قائم لـ 128 طالبًا بلا كفالة</p>
         </div>
         <div class="ba-card after">
-          <p class="ba-tag">بعد التمويل</p>
-          <p class="voice">مبنى مجهز بالكامل، مساحات آمنة للدعم النفسي، واستدامة تعليمية لسنوات قادمة</p>
+          <p class="ba-tag" data-i18n="ba.after.tag">بعد التمويل</p>
+          <p class="voice" data-i18n="ba.after.text">مبنى مجهز بالكامل، مساحات آمنة للدعم النفسي، واستدامة تعليمية لسنوات قادمة</p>
         </div>
       </div>
 
       <div class="impact-strip">
-        <div class="txt">إجمالي المستفيدين المباشرين (333 طالبًا) وغير المباشرين (145 فردًا من أسر الكادر) من استمرار المدرسة</div>
+        <div class="txt" data-i18n="impact.txt">إجمالي المستفيدين المباشرين (333 طالبًا) وغير المباشرين (145 فردًا من أسر الكادر) من استمرار المدرسة</div>
         <div class="num">478</div>
       </div>
 
@@ -523,71 +575,205 @@
 
 <footer class="cta-final">
   <div class="wrap">
-    <h2>300,000$ تفصل بين طفل ومستقبله</h2>
-    <p>ساهم اليوم في تجهيز مساحة آمنة ومستدامة لـ 333 طفلًا يتيمًا في إدلب. كل مساهمة، مهما كان حجمها، جزء من هذه القصة.</p>
-    <a class="btn" href="#" id="donate-btn-footer">ساهم الآن</a>
+    <h2 data-i18n="footer.title">300,000$ تفصل بين طفل ومستقبله</h2>
+    <p data-i18n="footer.text">ساهم اليوم في تجهيز مساحة آمنة ومستدامة لـ 333 طفلًا يتيمًا في إدلب. كل مساهمة، مهما كان حجمها، جزء من هذه القصة.</p>
+    <a class="btn" href="#" id="donate-btn-footer" data-i18n="btn.donate">ساهم الآن</a>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 /* ============================================================
    إعدادات قابلة للتعديل - عدّل هنا فقط، لا تحتاج لمس التصميم
+   budgetItems: كل بند له نص عربي وإنجليزي
    ============================================================ */
 const CONFIG = {
   fundingGoal: 300000,
   fundingRaised: 0,                 // حدّث هذا الرقم كل ما وصل تبرع جديد
   donateUrl: "https://molhamteam.com/campaigns/915",
-  budgetItems: [                    // نسب تقديرية أولية - استبدلها بعروض أسعار حقيقية
-    { label: "ترميم المبنى",              amount: 120000, color: "#0F5C4F" },
-    { label: "التأثيث والتجهيز",           amount: 75000,  color: "#C1502E" },
-    { label: "المستلزمات التعليمية",       amount: 60000,  color: "#C98B2E" },
-    { label: "احتياط تشغيلي (3 أشهر)",     amount: 45000,  color: "#6B8F71" }
+  budgetItems: [
+    { label: {ar:"ترميم المبنى",           en:"Building renovation"},        amount: 120000, color: "#0F5C4F" },
+    { label: {ar:"التأثيث والتجهيز",        en:"Furnishing & equipping"},     amount: 75000,  color: "#C1502E" },
+    { label: {ar:"المستلزمات التعليمية",    en:"Educational supplies"},       amount: 60000,  color: "#C98B2E" },
+    { label: {ar:"احتياط تشغيلي (3 أشهر)",  en:"Operating reserve (3 mo.)"},  amount: 45000,  color: "#6B8F71" }
   ]
 };
 
+/* ============================================================
+   قاموس الترجمة - لإضافة لغة جديدة مستقبلًا:
+   1) أضف عمودًا جديدًا لكل مفتاح (مثل fr:"...")
+   2) أضف اللغة لمصفوفة LANGS أدناه
+   ============================================================ */
+const LANGS = ['ar','en'];
+const I18N = {
+  'meta.title':      {ar:"حملة تجهيز مدرسة ملهم للأيتام | إدلب - سوريا", en:"Molham Orphans School Equipping Campaign | Idlib, Syria"},
+  'meta.desc':       {ar:"333 طفلًا يتيمًا يحتاجون مبنى تعليميًا آمنًا. ساهم في حملة تجهيز مدرسة ملهم للأيتام بقيمة 300,000 دولار.", en:"333 orphaned children need a safe school building. Support the Molham Orphans School equipping campaign — a $300,000 goal."},
+  'brand.title':     {ar:"مدرسة ملهم للأيتام", en:"Molham Orphans School"},
+  'brand.sub':       {ar:"حملة التجهيز - إدلب", en:"Equipping Campaign – Idlib"},
+  'btn.donate':      {ar:"ساهم الآن", en:"Donate Now"},
+  'hero.eyebrow':    {ar:"مدرسة مخصصة حصرًا لرعاية الأيتام - تأسست 2021", en:"A school dedicated exclusively to orphans — Est. 2021"},
+  'hero.title':      {ar:"333 طفلًا فقدوا آباءهم، لم يفقدوا أحلامهم", en:"333 children lost their parents — never their dreams"},
+  'hero.lead':       {ar:"كل طالب في مدرسة ملهم للأيتام فقد معيله بسبب الحرب — لا توجد استثناءات، فهذا شرط القبول الأساسي في المدرسة. اليوم 38% منهم بلا كفالة تعليمية فردية، والمبنى الحالي لم يعد كافيًا لاستيعابهم بأمان.", en:"Every student at Molham Orphans School lost their provider to the war — no exceptions; it is the school's core admission requirement. Today 38% of them have no individual education sponsorship, and the current building can no longer host them safely."},
+  'hero.cta1':       {ar:"ساهم في الحملة", en:"Support the Campaign"},
+  'hero.cta2':       {ar:"اقرأ القصة", en:"Read the Story"},
+  'fallback.hero':   {ar:"صورة رئيسية أفقية للمدرسة أو الطلاب", en:"Horizontal photo of the school or students"},
+  'fallback.portrait':{ar:"صورة بورتريه مربعة لطالب/ة (بموافقة)", en:"Square portrait of a student (with consent)"},
+  'kpi.1':           {ar:"طالبًا وطالبة (العدد الحالي النشط)", en:"students currently enrolled"},
+  'kpi.2':           {ar:"متوسط الكلفة الشهرية لكل طالب", en:"average monthly cost per student"},
+  'kpi.3':           {ar:"بلا كفالة تعليمية", en:"without education sponsorship"},
+  'kpi.4':           {ar:"فردًا من أسر الكادر يعتمدون على المدرسة", en:"staff family members depend on the school"},
+  'kpi.5':           {ar:"مستويات دراسية مخدومة (1-9)", en:"grade levels served (1–9)"},
+  'kpi.6':           {ar:"من الطلاب لديهم احتياجات صحية إضافية موثّقة", en:"of students have documented additional health needs"},
+  'kpi.note':        {ar:"المصدر: ملف بيانات الطلاب النشطين الحالي لمدرسة ملهم للأيتام (333 طالبًا) وتقرير الأثر الإنساني والتعليمي.", en:"Source: the school's current active student records (333 students) and the humanitarian & educational impact report."},
+  's1.eyebrow':      {ar:"القسم الأول", en:"Section One"},
+  's1.title':        {ar:"لماذا هذه المدرسة مهمة؟", en:"Why does this school matter?"},
+  's1.sub':          {ar:"مدرسة ملهم للأيتام ليست مركزًا تعليميًا عاديًا، بل بيئة حماية كاملة للأطفال الذين فقدوا معيلهم في الحرب: دعم نفسي، أنشطة، ومساحة آمنة يوميًا.", en:"Molham Orphans School is not an ordinary learning centre — it is a full protection environment for children who lost their provider to the war: psychosocial support, activities, and a safe space every day."},
+  'about.text':      {ar:"تستقبل المدرسة أطفالاً فقدوا أحد الوالدين أو كليهما، ويعيش كثير منهم في ظروف معيشية صعبة، حيث يضطر بعضهم للعمل بعد الدوام المدرسي. تقدّم تعليماً مجانياً متكاملاً، إلى جانب برامج دعم نفسي واجتماعي، وأنشطة تربوية تساعد على استقرار الأطفال واستمرارهم في التعليم. يعتمد المشروع على نظام الكفالات التعليمية لتغطية تكاليف الدراسة وتأمين المستلزمات الأساسية، إضافة إلى دعم المصروف اليومي للطلاب. يركّز العمل على إبقاء الأطفال ضمن العملية التعليمية وتخفيف أثر الظروف المعيشية عليهم. تأسست عام 2021.", en:"The school welcomes children who lost one or both parents, many of whom live in difficult conditions — some must work after school hours. It provides free, comprehensive education alongside psychosocial support programmes and educational activities that help children remain stable and stay in school. The project relies on education sponsorships to cover study costs and essential supplies, in addition to supporting students' daily allowances. The focus is on keeping children in education and easing the impact of their living conditions. Founded in 2021."},
+  'gender.label':    {ar:"التوزيع حسب الجنس - 333 طالبًا وطالبة", en:"Gender distribution — 333 students"},
+  'gender.counts':   {ar:"174 ذكرًا / 159 أنثى", en:"174 boys / 159 girls"},
+  'gender.male.bar': {ar:"ذكور 52%", en:"Boys 52%"},
+  'gender.female.bar':{ar:"إناث 48%", en:"Girls 48%"},
+  'gender.male':     {ar:"ذكور", en:"Boys"},
+  'gender.female':   {ar:"إناث", en:"Girls"},
+  'quote.text':      {ar:"\"يحمل حلمًا كبيرًا أن يصبح طبيبًا ليعالج المرضى وينقذ الأرواح، ليحقق طموح والدته ويصنع فرقًا في حياة الناس.\"", en:"\"He carries a big dream of becoming a doctor — to treat patients and save lives, to fulfil his mother's ambition and make a difference in people's lives.\""},
+  'quote.who':       {ar:"من ملف طالب في مدرسة ملهم للأيتام - إدلب", en:"From a student file at Molham Orphans School — Idlib"},
+  'dreams.title':    {ar:"أحلام أطفالنا", en:"Our children's dreams"},
+  'dreams.sub':      {ar:"الأكثر تكرارًا في ملفاتهم الشخصية - 333 قصة، حلم واحد مشترك: مستقبل أفضل", en:"The most frequent in their personal files — 333 stories, one shared dream: a better future"},
+  'dreams.feature':  {ar:"فريقنا المدرسي، حائز كأس بطولة مدارس الشمال المحرر", en:"Our school team — winners of the Northern Schools Championship Cup"},
+  'dream.doctor':    {ar:"🩺 طبيب / طبيبة", en:"🩺 Doctor"},
+  'dream.engineer':  {ar:"🏗️ مهندس / مهندسة", en:"🏗️ Engineer"},
+  'dream.swimmer':   {ar:"🏊 سباح / سباحة", en:"🏊 Swimmer"},
+  'dream.teacher':   {ar:"📚 معلم / معلمة", en:"📚 Teacher"},
+  'dream.lawyer':    {ar:"⚖️ محامٍ / محامية", en:"⚖️ Lawyer"},
+  'dream.pharmacist':{ar:"💊 صيدلاني / صيدلانية", en:"💊 Pharmacist"},
+  'dream.football':  {ar:"⚽ لاعب / لاعبة كرة قدم", en:"⚽ Footballer"},
+  's2.eyebrow':      {ar:"القسم الثاني", en:"Section Two"},
+  's2.title':        {ar:"لماذا الانتقال ضروري الآن؟", en:"Why is the move necessary now?"},
+  's2.sub':          {ar:"أكثر من 4 من كل 10 طلاب بلا كفالة تعليمية فردية، والمبنى الحالي بلغ حدوده القصوى. التأخير يعني مزيدًا من الأطفال معرضين لخطر ترك التعليم.", en:"More than 4 in 10 students have no individual education sponsorship, and the current building has reached its limits. Delay puts more children at risk of dropping out."},
+  'gap.label':       {ar:"حالة الكفالة التعليمية الفردية لـ 333 طالبًا", en:"Individual education sponsorship status — 333 students"},
+  'gap.counts':      {ar:"205 مكفول / 128 بلا كفيل", en:"205 sponsored / 128 unsponsored"},
+  'gap.covered.bar': {ar:"مكفولون 62%", en:"Sponsored 62%"},
+  'gap.uncovered.bar':{ar:"بلا كفالة 38%", en:"Unsponsored 38%"},
+  'gap.covered':     {ar:"كفالة نشطة", en:"Active sponsorship"},
+  'gap.uncovered':   {ar:"بلا كفيل حاليًا", en:"Currently unsponsored"},
+  's3.eyebrow':      {ar:"القسم الثالث", en:"Section Three"},
+  's3.title':        {ar:"كيف سيُصرف مبلغ 300,000$؟", en:"How will the $300,000 be spent?"},
+  's3.sub':          {ar:"توزيع أولي مقترح للمبلغ على بنود الترميم والتجهيز.", en:"A proposed initial allocation across renovation and equipping items."},
+  'budget.total':    {ar:"الإجمالي", en:"Total"},
+  'budget.disclaimer':{ar:"النسب أعلاه تقديرية بانتظار عروض أسعار فعلية للترميم والتجهيز.", en:"The figures above are estimates pending actual renovation and equipping quotes."},
+  's4.eyebrow':      {ar:"القسم الرابع", en:"Section Four"},
+  's4.title':        {ar:"ما الأثر المتوقع بعد التمويل؟", en:"What impact will the funding create?"},
+  's4.sub':          {ar:"من مبنى بلغ حدوده، إلى مساحة آمنة ومستدامة تحمي مستقبل مئات الأطفال وعشرات العائلات.", en:"From a building at its limits to a safe, sustainable space protecting the future of hundreds of children and dozens of families."},
+  'ba.before.tag':   {ar:"قبل التمويل", en:"Before funding"},
+  'ba.before.text':  {ar:"مبنى ضيق، بلا مساحة آمنة كافية، وخطر توقف التعليم قائم لـ 128 طالبًا بلا كفالة", en:"A cramped building with no adequate safe space — and a real risk of education stopping for 128 unsponsored students"},
+  'ba.after.tag':    {ar:"بعد التمويل", en:"After funding"},
+  'ba.after.text':   {ar:"مبنى مجهز بالكامل، مساحات آمنة للدعم النفسي، واستدامة تعليمية لسنوات قادمة", en:"A fully equipped building, safe spaces for psychosocial support, and educational sustainability for years to come"},
+  'impact.txt':      {ar:"إجمالي المستفيدين المباشرين (333 طالبًا) وغير المباشرين (145 فردًا من أسر الكادر) من استمرار المدرسة", en:"Total direct beneficiaries (333 students) and indirect beneficiaries (145 staff family members) of the school's continuity"},
+  'footer.title':    {ar:"300,000$ تفصل بين طفل ومستقبله", en:"$300,000 stand between a child and their future"},
+  'footer.text':     {ar:"ساهم اليوم في تجهيز مساحة آمنة ومستدامة لـ 333 طفلًا يتيمًا في إدلب. كل مساهمة، مهما كان حجمها، جزء من هذه القصة.", en:"Contribute today to equip a safe, sustainable space for 333 orphaned children in Idlib. Every contribution, whatever its size, is part of this story."},
+  'progress.goal':   {ar:"الهدف", en:"Goal"}
+};
+
+/* ============================================================
+   اللغة: قراءة التفضيل، تطبيقه، حفظه
+   الأولوية: ?lang= في الرابط ← ثم localStorage ← ثم العربية
+   ============================================================ */
+function currentLang(){
+  const p = new URLSearchParams(location.search).get('lang');
+  if (p && LANGS.includes(p)) return p;
+  if (location.pathname.startsWith('/en')) return 'en';
+  const saved = localStorage.getItem('lang');
+  if (saved && LANGS.includes(saved)) return saved;
+  return 'ar';
+}
+let LANG = currentLang();
+
+function money(n, lang){
+  const s = n.toLocaleString('en-US');
+  return lang === 'en' ? '$' + s : s + '$';
+}
+
+function applyLang(lang){
+  LANG = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const entry = I18N[el.getAttribute('data-i18n')];
+    if (entry && entry[lang] != null) el.textContent = entry[lang];
+  });
+
+  document.title = I18N['meta.title'][lang];
+  const md = document.querySelector('meta[name="description"]');
+  if (md) md.setAttribute('content', I18N['meta.desc'][lang]);
+
+  const lt = document.getElementById('lang-toggle');
+  if (lt) lt.textContent = (lang === 'ar') ? 'EN' : 'ع';
+
+  renderProgress(lang);
+  renderBudget(lang);
+  refreshCounters(lang);
+}
+
 /* ---------- شريط التقدم في الهيدر ---------- */
-const pct = Math.min(100, Math.round((CONFIG.fundingRaised / CONFIG.fundingGoal) * 100));
-document.getElementById('progress-fill').style.width = pct + '%';
-document.getElementById('raised-label').textContent = CONFIG.fundingRaised.toLocaleString('en-US') + '$';
-document.getElementById('goal-label').textContent = 'الهدف ' + CONFIG.fundingGoal.toLocaleString('en-US') + '$';
+function renderProgress(lang){
+  const pct = Math.min(100, Math.round((CONFIG.fundingRaised / CONFIG.fundingGoal) * 100));
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('raised-label').textContent = money(CONFIG.fundingRaised, lang);
+  document.getElementById('goal-label').textContent = I18N['progress.goal'][lang] + ' ' + money(CONFIG.fundingGoal, lang);
+}
 ['donate-btn-header','donate-btn-hero','donate-btn-footer'].forEach(id=>{
-  document.getElementById(id).href = CONFIG.donateUrl;
+  const el = document.getElementById(id);
+  if (el) el.href = CONFIG.donateUrl;
 });
 
 /* ---------- بطاقة الميزانية ---------- */
-const total = CONFIG.budgetItems.reduce((s,i)=>s+i.amount,0);
-const budgetCard = document.getElementById('budget-card');
-let rowsHtml = '';
-CONFIG.budgetItems.forEach(item=>{
-  const p = Math.round((item.amount/total)*100);
-  rowsHtml += `<div class="budget-row">
-    <span>${item.label}</span>
-    <div class="budget-track"><div class="budget-fill" style="width:${p}%; background:${item.color}"></div></div>
-    <span class="budget-amount">${item.amount.toLocaleString('en-US')}$</span>
-  </div>`;
-});
-rowsHtml += `<div class="budget-total"><span>الإجمالي</span><span>${total.toLocaleString('en-US')}$</span></div>
-  <p class="budget-disclaimer">النسب أعلاه تقديرية بانتظار عروض أسعار فعلية للترميم والتجهيز.</p>`;
-budgetCard.innerHTML = rowsHtml;
+function renderBudget(lang){
+  const total = CONFIG.budgetItems.reduce((s,i)=>s+i.amount,0);
+  const budgetCard = document.getElementById('budget-card');
+  if (!budgetCard) return;
+  let rowsHtml = '';
+  CONFIG.budgetItems.forEach(item=>{
+    const p = Math.round((item.amount/total)*100);
+    rowsHtml += `<div class="budget-row">
+      <span>${item.label[lang]}</span>
+      <div class="budget-track"><div class="budget-fill" style="width:${p}%; background:${item.color}"></div></div>
+      <span class="budget-amount">${money(item.amount, lang)}</span>
+    </div>`;
+  });
+  rowsHtml += `<div class="budget-total"><span>${I18N['budget.total'][lang]}</span><span>${money(total, lang)}</span></div>
+    <p class="budget-disclaimer">${I18N['budget.disclaimer'][lang]}</p>`;
+  budgetCard.innerHTML = rowsHtml;
+}
 
 /* ---------- عدّاد الأرقام في الـ KPIs ---------- */
+function fmtCount(el, val, lang){
+  const suffix = el.getAttribute('data-suffix') || '';
+  if (suffix === '$' && lang === 'en') return '$' + val;
+  return val + suffix;
+}
+function refreshCounters(lang){
+  document.querySelectorAll('.kpi-num').forEach(el=>{
+    if (el.dataset.done) el.textContent = fmtCount(el, parseInt(el.getAttribute('data-count'),10), lang);
+  });
+}
 const counters = document.querySelectorAll('.kpi-num');
 const counterObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(!entry.isIntersecting) return;
     const el = entry.target;
     const target = parseInt(el.getAttribute('data-count'),10);
-    const suffix = el.getAttribute('data-suffix') || '';
     const duration = 900;
     const start = performance.now();
     function tick(now){
       const p = Math.min(1,(now-start)/duration);
-      el.textContent = Math.round(target*p) + suffix;
+      el.textContent = fmtCount(el, Math.round(target*p), LANG);
       if(p<1) requestAnimationFrame(tick);
+      else el.dataset.done = '1';
     }
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      el.textContent = target + suffix;
+      el.textContent = fmtCount(el, target, LANG);
+      el.dataset.done = '1';
     } else {
       requestAnimationFrame(tick);
     }
@@ -596,8 +782,32 @@ const counterObserver = new IntersectionObserver((entries)=>{
 },{threshold:0.5});
 counters.forEach(c=>counterObserver.observe(c));
 
+/* ---------- الوضع الليلي / النهاري ---------- */
+function currentTheme(){
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark' || saved === 'light') return saved;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('theme', t);
+  const tt = document.getElementById('theme-toggle');
+  if (tt) tt.textContent = (t === 'dark') ? '☀️' : '🌙';
+}
+applyTheme(currentTheme());
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e=>{
+  if (!localStorage.getItem('theme')) applyTheme(e.matches ? 'dark' : 'light');
+});
+
+/* ---------- أزرار التبديل ---------- */
+document.getElementById('lang-toggle').addEventListener('click', ()=>{
+  applyLang(LANG === 'ar' ? 'en' : 'ar');
+});
+document.getElementById('theme-toggle').addEventListener('click', ()=>{
+  applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+
 /* ---------- تفعيل نقاط العمود الجانبي (spine) ---------- */
-const spineNodes = document.querySelectorAll('.spine-node');
 const sectionObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     const node = document.querySelector('.spine-node[data-target="'+entry.target.id+'"]');
@@ -610,6 +820,9 @@ const sectionObserver = new IntersectionObserver((entries)=>{
   const sec = document.getElementById(id);
   if(sec) sectionObserver.observe(sec);
 });
+
+/* ---------- تشغيل اللغة الأولية ---------- */
+applyLang(LANG);
 </script>
 </body>
 </html>
